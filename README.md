@@ -2,6 +2,20 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.4.
 
+## TUTORIAL PAGES:
+https://angular.io/tutorial
+#### Components
+- https://angular.io/guide/component-overview
+- https://angular.io/guide/architecture-components
+
+#### Services
+- https://angular.io/guide/architecture-services
+
+#### Testing
+- https://angular.io/guide/testing
+- https://angular.io/guide/testing-components-basics
+- https://angular.io/guide/testing-services
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

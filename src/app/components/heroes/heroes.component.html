@@ -1,0 +1,29 @@
+<h2>My Heroes</h2>
+<ul class="heroes">
+  <!-- 
+    REPEATER DIRECTIVE - *ngFor=""
+    <li> is the host element
+    heroes is the component property array
+    hero holds the current hero object for each iteration
+  
+    EVENT BINDING - (event)=""
+    listens for click event -> execute expression
+
+    CLASS BINDING - [class.<classname>]=""
+    adds class <classname> to element when the expression evaluates true
+  -->
+  <li 
+    *ngFor="let hero of heroes" 
+    (click)="onSelect(hero)"
+    [class.selected]="hero === selectedHero"
+  >
+    <span class="badge">{{hero.id}}</span> {{hero.name}}
+  </li>
+</ul>
+
+<!-- 
+  input, one-way data binding - PROPERTY BINDING
+  pass this component's 'selectedHero' property
+  to hero-detail component's 'hero' input property
+-->
+<app-hero-detail [hero]="selectedHero" ></app-hero-detail>

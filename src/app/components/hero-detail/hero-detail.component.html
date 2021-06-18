@@ -1,0 +1,21 @@
+<!-- 
+  ng-container - does not create DOM element; like React.Fragment
+  good for structural directive conditions
+-->
+<ng-container *ngIf="hero">
+
+  <!-- uppercase pipe in interpolation binding -->
+  <h2>{{hero.name | uppercase}} Details</h2>
+  <div>
+    <span>id: </span>{{hero.id}}
+  </div>
+
+  <!-- 
+    [(ngModel)]="<property>": 2-way data binding 
+    make sure FormsModule is imported from "@angular/forms" in app.module.ts
+  -->
+  <div>
+    <label for="name">Hero name:</label>
+    <input id="name" [(ngModel)]="hero.name" placeholder="name">
+  </div>
+</ng-container>

@@ -22,4 +22,12 @@ export class HeroService {
     return heroes;
   }
 
+  // ! at end of expression means an assertion that the expression will never == null
+  getHero(id: number): Observable<Hero> {
+    const hero = HEROES.find(h => h.id === id)!;
+    this.messageService.add(`HeroService: fetched hero id=${id}`);
+    return of(hero);
+  }
+
+
 }

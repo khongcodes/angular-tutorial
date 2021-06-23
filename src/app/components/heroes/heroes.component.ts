@@ -12,8 +12,6 @@ export class HeroesComponent implements OnInit {
 
   heroes:Hero[] = [];
 
-  selectedHero?: Hero;
-
   // component constructor should do minimal initialization - 
   //    like wire constructor parameters to properties.
   // it should NOT make HTTP requests to a server
@@ -37,11 +35,6 @@ export class HeroesComponent implements OnInit {
   getHeroes(): void {
     this.heroService.getHeroes()
       .subscribe(heroes => this.heroes = heroes);
-  }
-
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
-    this.messageService.add(`HeroesComponent: selected Hero id=${hero.id}`);
   }
 
 }
